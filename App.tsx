@@ -303,7 +303,7 @@ const App: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand-surface border border-brand-border text-[9px] font-black text-brand-orange tracking-[0.3em] uppercase mb-6 shadow-lg"
+              className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand-surface border border-brand-border text-[9px] font-black text-brand-orange tracking-[0.3em] uppercase mb-12 shadow-lg"
             >
               <div className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
               Architecting Digital Ecosystems
