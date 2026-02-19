@@ -1,0 +1,42 @@
+D KOUSHIK - SOFTWARE ENGINEER
+
+Contact Information:
+Email: koushikabhi.dev@gmail.com
+Phone: +91 9110405638
+LinkedIn: https://www.linkedin.com/in/d-koushik-31809a2ba/
+GitHub: https://github.com/KoushikGIT7
+
+PROFESSIONAL SUMMARY:
+I am a Computer Science student focused on designing and developing scalable web systems. My approach combines structured problem solving, frontend engineering, backend fundamentals, and system-level thinking to build products that solve real-world inefficiencies. I build systems — not just applications.
+
+EDUCATION:
+B.Tech in Computer Science and Engineering (2023–2027)
+
+CORE COMPETENCIES:
+- Frontend: HTML5, CSS3, JavaScript, React.js
+- Backend & Systems: REST APIs, Database Design, System Architecture
+- Engineering: Problem Solving, Clean Code, Data Structures
+- Tools: Git, VS Code, GenAI Workflow, Prompt Engineering
+
+NOTABLE PROJECTS:
+1. JOE – Cafeteria Automation System
+   - Digital ordering system designed to eliminate queue chaos in institutional cafeterias
+   - Technologies: JavaScript, React.js, Database Design
+
+2. Frookoon – Grocery Platform
+   - Frontend grocery prototype with scalable architecture vision
+   - Technologies: HTML, CSS, JavaScript, React.js
+
+3. Railway Track Management System
+   - Hackathon-winning railway scheduling system for real-time tracking
+   - Technologies: Java, Database Concepts, System Logic
+   - Won 1st Prize at SIH Internal Hackathon
+
+4. MedFlare – Medical Digitalization
+   - Healthcare digital platform to streamline patient record management
+   - Technologies: HTML, CSS, JavaScript, React.js
+
+ACHIEVEMENTS:
+- SIH Internal Hackathon: 1st Prize Winner
+
+NOTE: Please replace this text file with your actual resume.pdf file in the public folder.
