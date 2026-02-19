@@ -63,6 +63,18 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
@@ -146,9 +158,9 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-full left-0 w-full bg-brand-surface border-b border-brand-border shadow-2xl overflow-hidden"
+            className="md:hidden fixed top-[80px] left-0 w-full bg-brand-surface border-b border-brand-border shadow-2xl overflow-hidden max-h-[calc(100vh-80px)]"
           >
-            <div className="flex flex-col p-6 space-y-5">
+            <div className="flex flex-col p-6 space-y-5 overflow-y-auto max-h-[calc(100vh-120px)]">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.name}
