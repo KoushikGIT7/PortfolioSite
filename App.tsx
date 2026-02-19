@@ -90,25 +90,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-3xl border-b border-brand-border/60 py-4' : 'bg-transparent py-10'}`}>
-      <div className="max-w-7xl mx-auto px-10 flex justify-between items-center">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-3xl border-b border-brand-border/60 py-3 md:py-4' : 'bg-transparent py-6 md:py-10'}`}>
+      <div className="max-w-7xl mx-auto px-5 md:px-10 flex justify-between items-center">
         <a 
           href="#" 
           onClick={(e) => scrollToSection(e, '#')}
-          className="text-3xl font-black tracking-tighter text-brand-text"
+          className="text-2xl md:text-3xl font-black tracking-tighter text-brand-text"
         >
           DK<span className="text-brand-orange">.</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-12">
-          <div className="flex gap-10">
+        <div className="hidden md:flex items-center gap-10">
+          <div className="flex gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`relative text-[10px] font-black tracking-[0.3em] uppercase transition-colors py-2 ${activeSection === link.href.replace('#', '') ? 'text-brand-orange' : 'text-brand-muted hover:text-brand-text'}`}
+                className={`relative text-[9px] md:text-[10px] font-black tracking-[0.3em] uppercase transition-colors py-2 whitespace-nowrap ${activeSection === link.href.replace('#', '') ? 'text-brand-orange' : 'text-brand-muted hover:text-brand-text'}`}
               >
                 {link.name}
                 {activeSection === link.href.replace('#', '') && (
@@ -123,7 +123,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, '#contact')}
-            className="px-8 py-3 bg-brand-orange text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-brand-hover hover:shadow-2xl hover:shadow-brand-orange/40 transition-all duration-500 transform hover:-translate-y-1"
+            className="px-6 md:px-8 py-2 md:py-3 bg-brand-orange text-white text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-brand-hover hover:shadow-2xl hover:shadow-brand-orange/40 transition-all duration-500 transform hover:-translate-y-1 whitespace-nowrap"
           >
             Connect
           </a>
@@ -131,10 +131,10 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden p-3 text-brand-text hover:bg-brand-surface rounded-2xl transition-colors"
+          className="md:hidden p-2 text-brand-text hover:bg-brand-surface rounded-2xl transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -145,19 +145,28 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden absolute top-full left-0 w-full bg-brand-surface border-b border-brand-border shadow-3xl overflow-hidden"
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-full left-0 w-full bg-brand-surface border-b border-brand-border shadow-2xl overflow-hidden"
           >
-            <div className="flex flex-col p-10 space-y-8">
+            <div className="flex flex-col p-6 space-y-5">
               {navLinks.map((link) => (
-                <a
+                <motion.a
                   key={link.name}
                   href={link.href}
-                  className={`text-2xl font-black uppercase tracking-widest transition-colors ${activeSection === link.href.replace('#', '') ? 'text-brand-orange' : 'text-brand-text'}`}
+                  className={`text-base md:text-lg font-black uppercase tracking-wider transition-all duration-300 ${activeSection === link.href.replace('#', '') ? 'text-brand-orange translate-x-2' : 'text-brand-text hover:text-brand-orange hover:translate-x-1'}`}
                   onClick={(e) => scrollToSection(e, link.href)}
+                  whileHover={{ x: 8 }}
                 >
                   {link.name}
-                </a>
+                </motion.a>
               ))}
+              <a
+                href="#contact"
+                onClick={(e) => scrollToSection(e, '#contact')}
+                className="mt-4 px-6 py-3 bg-brand-orange text-white text-sm font-black uppercase tracking-[0.15em] rounded-xl hover:bg-brand-hover transition-all duration-300 text-center"
+              >
+                Connect
+              </a>
             </div>
           </motion.div>
         )}
