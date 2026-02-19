@@ -299,10 +299,10 @@ const App: React.FC = () => {
             className="flex flex-col items-start text-left flex-1"
           >
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-brand-text tracking-[-0.05em] mb-8 leading-[0.85]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-text tracking-[-0.05em] mb-8 leading-[0.85]">
               {portfolioData.profile.name}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-brand-text to-brand-muted/40">
-                Full-Stack Web Developer
+                Software Engineer
               </span>
             </h1>
             
