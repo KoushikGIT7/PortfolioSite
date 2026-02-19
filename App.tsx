@@ -67,11 +67,14 @@ const Navbar = () => {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     };
   }, [mobileMenuOpen]);
 
@@ -154,13 +157,14 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed top-[80px] left-0 w-full bg-brand-surface border-b border-brand-border shadow-2xl overflow-hidden max-h-[calc(100vh-80px)]"
+            className="md:hidden fixed top-20 left-0 w-full bg-brand-surface border-b border-brand-border shadow-2xl z-40"
+            style={{ maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}
           >
-            <div className="flex flex-col p-6 space-y-5 overflow-y-auto max-h-[calc(100vh-120px)]">
+            <div className="flex flex-col p-6 space-y-5 pb-10">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.name}
