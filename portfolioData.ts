@@ -29,7 +29,7 @@ export interface Internship {
 export const portfolioData = {
   profile: {
     name: "D Koushik",
-    title: "Systems-Oriented Web Developer",
+    title: "Software Engineer",
     tagline: "I build scalable digital products with clean architecture and real-world impact.",
     summary: "I am a Computer Science student focused on designing and developing scalable web systems. My approach combines structured problem solving, frontend engineering, backend fundamentals, and system-level thinking to build products that solve real-world inefficiencies. I build systems — not just applications.",
     contact: {
