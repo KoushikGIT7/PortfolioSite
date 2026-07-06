@@ -348,8 +348,8 @@ const App: React.FC = () => {
                 Explore Systems <ArrowRight size={24} />
               </a>
               <a 
-                href="/resume.pdf" 
-                download="DKoushik-Resume.pdf"
+                href="/D_Koushik_Resume._.pdf" 
+                download="D_Koushik_Resume._.pdf"
                 className="w-full sm:w-auto px-12 py-6 bg-brand-surface border-2 border-brand-orange text-brand-orange font-black text-lg rounded-2xl hover:bg-brand-orange/10 hover:scale-[1.05] active:scale-95 transition-all flex items-center justify-center gap-4"
               >
                 Download Resume <Download size={24} />
