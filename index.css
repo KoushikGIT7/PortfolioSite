@@ -1,0 +1,6 @@
+/* Custom Portfolio Design Utilities */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
